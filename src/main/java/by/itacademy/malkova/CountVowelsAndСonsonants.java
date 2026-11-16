@@ -1,0 +1,33 @@
+package by.itacademy.malkova;
+
+import java.util.Scanner;
+
+public class CountVowelsAndСonsonants {
+    static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter some text: ");
+        String text = scanner.nextLine();
+        text = text.toLowerCase();
+        text = text.replace(" ", "");
+
+        String vowels = "aeuoiy";
+        int countVowel = 0;
+        int countConsonants = 0;
+        for (int i = 0; i < text.length(); i++) {
+            boolean isVowel = false;
+            for (int j = 0; j < vowels.length(); j++) {
+                if (text.charAt(i) == vowels.charAt(j)) {
+                    isVowel = true;
+                    break;
+                }
+            }
+            if (isVowel) {
+                countVowel++;
+            } else {
+                countConsonants++;
+            }
+        }
+        System.out.println("Vowel = " + countVowel);
+        System.out.println("Conconants =" + countConsonants);
+    }
+}
