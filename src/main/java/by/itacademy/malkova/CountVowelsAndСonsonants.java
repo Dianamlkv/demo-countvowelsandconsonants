@@ -6,17 +6,17 @@ public class CountVowelsAndСonsonants {
     static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter some text: ");
-        String text = scanner.nextLine();
-        text = text.toLowerCase();
-        text = text.replace(" ", "");
+        String testedString = scanner.nextLine();
+        testedString = testedString.toLowerCase();
+        testedString = testedString.replace(" ", "");
 
         String vowels = "aeuoiy";
         int countVowel = 0;
         int countConsonants = 0;
-        for (int i = 0; i < text.length(); i++) {
+        for (int i = 0; i < testedString.length(); i++) {
             boolean isVowel = false;
             for (int j = 0; j < vowels.length(); j++) {
-                if (text.charAt(i) == vowels.charAt(j)) {
+                if (testedString.charAt(i) == vowels.charAt(j)) {
                     isVowel = true;
                     break;
                 }
